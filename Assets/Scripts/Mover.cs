@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
-    //[RequireComponent(typeof(Rigidbody))]
     [SerializeField] private float _rotationSpeed;
     [SerializeField] private float _maxSpeed;
 
@@ -34,7 +33,6 @@ public class Mover : MonoBehaviour
 
     private void Start()
     {
-        //_rigidbody = GetComponent<Rigidbody>();
         _rigidbody = GetComponentInChildren<Rigidbody>();
 
     }
