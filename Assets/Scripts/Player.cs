@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [RequireComponent(typeof(Mover))]
-public class PlayerController : MonoBehaviour
+public class Player : MonoBehaviour
 {
-    private Mover _person;
+    private Mover _mover;
 
     private void Start()
     {
-        _person = GetComponent<Mover>();
+        _mover = GetComponent<Mover>();
     }
 
     void FixedUpdate()
@@ -23,6 +23,6 @@ public class PlayerController : MonoBehaviour
             direction.Normalize();
         }
 
-        _person.Move(direction, direction.magnitude * _person.MaxSpeed);
+        _mover.Move(direction, direction.magnitude * _mover.MaxSpeed);
     }
 }
